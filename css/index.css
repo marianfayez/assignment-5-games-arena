@@ -1,0 +1,435 @@
+@font-face {
+  font-family: days one;
+  src: url(../fonts/Days_One/DaysOne-Regular.ttf);
+}
+@font-face {
+  font-family: Chakra Petch;
+  src: url(../fonts/Chakra_Petch/ChakraPetch-Bold.ttf);
+}
+body {
+  font-family: days one;
+}
+:root {
+  --primary-color: #cbfe1c;
+  --secondary-color: #f1f1f1;
+  --background-color: #001217;
+}
+.navbar {
+  font-family: Chakra Petch;
+  font-weight: 300;
+}
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+.nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+.navbar-nav {
+  --bs-nav-link-color: white;
+  --bs-nav-link-hover-color: var(--primary-color);
+}
+.navbar-nav .nav-link {
+  margin-inline: 0.5rem;
+}
+.nav-icon {
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-icon:hover {
+  color: var(--primary-color);
+}
+.btn {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  font-weight: bold;
+}
+
+.hero-section {
+  min-height: 100vh;
+  padding-top: 100px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("../images/hero-bg.jpg");
+  background-repeat: no-repeat;
+}
+
+.btn-game {
+  padding: 1rem 1.5rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+.btn-game:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+.btn-outline-game {
+  padding: 1rem 1.5rem;
+  font-weight: 400;
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+.btn-outline-game:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+.hero-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  border-radius: 12px;
+}
+.player-badge {
+  background-color: #0b0e13;
+  border: 1px solid #364153;
+  width: 140px;
+  height: 80px !important;
+  left: 0;
+  bottom: 0;
+  transform: translate(-20px, 20px);
+}
+.hero-image-wrap {
+  position: relative;
+  width: 90%;
+}
+
+.our-games h3,
+.get-in-touch h3 {
+  color: var(--primary-color);
+  font-weight: 300;
+}
+.our-games h3::after,
+.get-in-touch h3::after {
+  content: "";
+  display: inline-block;
+  width: 70px;
+  height: 3px;
+  margin-inline-start: 10px;
+
+  vertical-align: middle;
+  background: linear-gradient(to right, var(--primary-color), transparent);
+}
+.our-games h3::before,
+.get-in-touch h3::before {
+  content: "";
+  display: inline-block;
+  width: 70px;
+  height: 3px;
+  margin-inline-end: 10px;
+
+  vertical-align: middle;
+  background: linear-gradient(to left, var(--primary-color), transparent);
+}
+.our-games h4,
+.get-in-touch h4 {
+  color: var(--secondary-color);
+}
+.get-in-touch {
+  background-color: #0c1016;
+}
+.img-game {
+  border: 3px solid transparent;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.img-game img {
+  transition: transform 0.3s ease;
+}
+.image-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent, #bfc32d);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.badge-hover {
+  top: 5%;
+  left: 5%;
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: all 0.3s ease;
+}
+
+.img-game:hover {
+  border-color: var(--primary-color);
+}
+
+.img-game:hover img {
+  transform: scale(1.05);
+}
+
+.img-game .game-overlay {
+  padding: 0.25rem 1rem;
+  color: white;
+  background-color: #1d2c14;
+  font-size: 0.5rem;
+}
+.badge-bottom {
+  bottom: 5%;
+  left: 5%;
+  transform: translateY(12px);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  opacity: 0;
+}
+.img-game:hover .image-gradient,
+.img-game:hover .badge-hover,
+.img-game:hover .badge-bottom {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.games-carousel .carousel-control-prev,
+.games-carousel .carousel-control-next {
+  top: auto;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #c9fe1c;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.games-carousel .carousel-control-prev {
+  left: calc(50% - 48px);
+}
+
+.games-carousel .carousel-control-next {
+  right: calc(50% - 48px);
+}
+
+.games-carousel .carousel-control-prev-icon,
+.games-carousel .carousel-control-next-icon {
+  width: 16px;
+  height: 16px;
+}
+.card-game {
+  background-color: #1a1a1a;
+  transition: all 0.3s ease;
+  height: 230px;
+}
+.card-game .card-icon {
+  background-color: #06193a;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: var(--primary-color);
+}
+.card-game:hover .card-icon {
+  background-color: var(--primary-color);
+  color: #06193a;
+}
+.card-game:hover {
+  border-color: var(--primary-color) !important;
+}
+.card-game {
+  position: relative;
+  overflow: visible;
+}
+
+.card-game::before,
+.card-game::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  opacity: 0;
+  transform: scale(0.35);
+
+  transition: all 0.25s ease;
+}
+
+.card-game::before {
+  top: 18px;
+  left: 18px;
+  border-top-color: var(--primary-color);
+  border-left-color: var(--primary-color);
+  transform-origin: top left;
+}
+
+.card-game::after {
+  right: 18px;
+  bottom: 18px;
+  border-right-color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+  transform-origin: bottom right;
+}
+
+.card-game:hover::before,
+.card-game:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+.logo-section {
+  background: radial-gradient(
+    ellipse at center,
+    #789a12 0%,
+    #374718 48%,
+    #101416 82%
+  );
+}
+
+.glow-line {
+  width: 82%;
+  height: 3px;
+  background: #caff35;
+  box-shadow:
+    0 0 8px #caff35,
+    0 0 22px #a9e51b,
+    0 0 45px #8ebc13;
+}
+
+.logo-row {
+  width: max-content;
+  animation: slide-left 25s linear infinite;
+}
+
+.logo-row.reverse {
+  animation-name: slide-right;
+}
+
+.logo-img {
+  width: 115px;
+  height: 90px;
+  overflow: hidden;
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-25%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.section-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 2.8rem;
+}
+.team-photo {
+  height: 280px !important;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(100%);
+  transition: all 0.35s ease;
+}
+.team-card:hover .team-photo {
+  filter: grayscale(0%);
+}
+.team-card:hover .team-job,
+.team-card:hover .team-badge {
+  color: var(--primary-color);
+}
+
+.team-job {
+  font-size: 0.7rem;
+  color: grey;
+  font-weight: 400;
+}
+.card-details {
+  font-size: 0.5rem;
+  color: #838b98;
+  font-weight: 400;
+}
+.team-badge {
+  top: 85%;
+  right: 25px;
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: right center;
+  font-size: 0.9rem;
+  color: grey;
+}
+.contact-box {
+  background-color: #1e2939;
+  padding: 40px 20px;
+}
+.contact-icon {
+  background-color: var(--primary-color);
+  padding: 15px;
+}
+.contact-box .contact-details p {
+  color: #939aa8;
+  font-size: 12px;
+}
+.contact-box-color {
+  background-image: linear-gradient(to left, #25e070, #c8fd21);
+  padding: 40px 20px;
+}
+.contact-details .join-details {
+  font-size: 12px;
+}
+.join-icons {
+  background-color: black;
+  color: var(--primary-color);
+}
+.form-label {
+  color: #c7cad2;
+  font-size: 12px;
+  display: block;
+}
+.form-input {
+  background-color: #364153;
+  padding: 12px;
+  font-size: 12px;
+  border: 1px solid #404b5c;
+}
+.form-check-label {
+  font-size: 12px;
+}
+.form-btn {
+  background-color: var(--primary-color);
+  font-weight: 100;
+}
+.form-btn:hover {
+  background-color: #a8d321;
+  color: black;
+}
+.text-hour {
+  color: var(--primary-color);
+}
+.footer {
+  background-color: #000000;
+}
+.footer .logo {
+  color: var(--primary-color);
+}
+.footer p {
+  font-size: 12px;
+  color: #838a96;
+}
+.footer .social-media-icon {
+  color: #838a96;
+}
+.footer .social-media-icon i:hover {
+  color: var(--primary-color);
+}
+.footer h6 {
+  font-size: 12px;
+  color: #838a96;
+}
+.footer h6:hover {
+  color: var(--primary-color);
+}
